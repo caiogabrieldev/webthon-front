@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import Inicio from './pages/Inicio';
 import './App.css';
 import Menu from './pages/Menu';
+import Footer from './pages/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
