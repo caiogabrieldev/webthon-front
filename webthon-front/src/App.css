@@ -124,12 +124,7 @@
   animation: textos 1s forwards;
 }
 
-@keyframes textos {
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
+
 
 .infosInicio>h1{
   font-size: 70px;
@@ -180,17 +175,162 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.linhaDef{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.englobImgs{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgLinhaDef{
+  opacity: 0;
+  border-radius: 500px;
+  width: 65%;
+  height: 65%;
+  transform: translateX(20px);
+  animation: imsInicioLA 1s forwards;
+}
+.englobP{
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: textos 1s forwards;
+  color: white;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.engloballContent{
+  margin-top: -58px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 81vh;
+  
+  
+}
+#imgImpactos{
+  transform: translateX(-20px);
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgb(22, 22, 22);
+  animation: img 1s forwards;
+}
+.englobPs{
+  width: 40%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
+}
+#comoAfeta{
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: textos 1s forwards;
+  margin-top: 70px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#comoAfeta2{
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: textos 1s forwards;
+  margin-top: 70px;
+  width: 100%;
+  color: white;
+  text-align: start;
+  margin-left: 5vw;
+  font-size: 60px;
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.englobMedidasG{
+  margin-top: 4%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+.itemM{
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: textos 1s forwards;
+ padding-left: 10%;
+  
+  max-width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemM:hover{
+
+
+  transform: scale(1.02);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 12px rgb(54, 54, 54);
+}
+.itemM>p{
+  color: white;
+  width: 90%;
+}
+.imgitem{
+  box-shadow: 0 0 7px black;
+  height: 120px;
+  width: 120px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 60%;
+}
+.englobPs>p{
+  font-size: 18px;
+  opacity: 0;
+  width: 80%;
+  transform: translateX(20px);
+  animation: textos 1s forwards;
+  text-align: center;
+}
+#finalImg{
+  height: 55vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+.englobP>p{
+  
+  width: 60%;
+  font-size: 21px;
+}
 .imgrow{
+  transform: translateY(-20px);
   height: 130%;
   width: 100%;
   z-index: -1;
   animation: img 1s forwards;
 }
+.linhaDois{
+  height: 100vh;
+  width: 100vw;
+}
 @keyframes img {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+ 
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -250,4 +390,13 @@ body{
 }
 body{
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes textos {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

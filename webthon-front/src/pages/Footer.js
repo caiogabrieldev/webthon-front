@@ -17,7 +17,7 @@ function Footer() {
                     <div className='englobLinksInf'>
                         <p>Brasil</p>
                         <p>Política de privacidade</p>
-                        <p>Política de cokies</p>
+                        <p>Política de cookies</p>
                         <p>Termos de uso</p>
                     </div>
 
