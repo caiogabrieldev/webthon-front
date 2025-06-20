@@ -29,78 +29,81 @@ function Impactos() {
 
             </div>
 
+            <div className="slaEnglob">
+                <h1 id="comoAfeta2">Medidas Gerais</h1>
+                <div className="englobMedidasG">
 
-            <h1 id="comoAfeta2">Medidas Gerais</h1>
-            <div className="englobMedidasG">
-            
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={th} className="imgitem"></img>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={th} className="imgitem"></img>
+                        </div>
+                        <p>Avalie se o conteúdo é necessário, verdadeiro e respeitoso</p>
                     </div>
-                    <p>Avalie se o conteúdo é necessário, verdadeiro e respeitoso</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={golpe} className="imgitem"></img>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={golpe} className="imgitem"></img>
+                        </div>
+                        <p>Desconfie de mensagens com senso de urgência, ofertas milagrosas ou links desconhecidos. Nunca envie códigos recebidos por SMS ou WhatsApp sem verificar a origem</p>
                     </div>
-                    <p>Desconfie de mensagens com senso de urgência, ofertas milagrosas ou links desconhecidos. Nunca envie códigos recebidos por SMS ou WhatsApp sem verificar a origem</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={news} className="imgitem"></img>
-                    </div>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={news} className="imgitem"></img>
+                        </div>
 
-                    <p>Antes de compartilhar notícias, confirme se a fonte é confiável. Use plataformas de checagem</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={pass} className="imgitem"></img>
+                        <p>Antes de compartilhar notícias, confirme se a fonte é confiável. Use plataformas de checagem</p>
                     </div>
-                    <p>Use senhas fortes e diferentes para cada serviço, ative a verificação em duas etapas e mantenha seus aplicativos atualizados</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={time} className="imgitem"></img>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={pass} className="imgitem"></img>
+                        </div>
+                        <p>Use senhas fortes e diferentes para cada serviço, ative a verificação em duas etapas e mantenha seus aplicativos atualizados</p>
                     </div>
-                    <p>Use ferramentas de controle de tempo nos dispositivos e faça pausas regulares para manter a saúde mental e física</p>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={time} className="imgitem"></img>
+                        </div>
+                        <p>Use ferramentas de controle de tempo nos dispositivos e faça pausas regulares para manter a saúde mental e física</p>
+                    </div>
+                </div>
+                <h1 id="comoAfeta2">Para pais e responsáveis</h1>
+                <div className="englobMedidasG">
+
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={talk} className="imgitem"></img>
+                        </div>
+                        <p>Converse com seus filhos sobre os conteúdos que acessam e ajude a estabelecer limites saudáveis para o uso de dispositivos</p>
+                    </div>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={teach} className="imgitem"></img>
+                        </div>
+                        <p>Ensine a reconhecer golpes, perfis falsos, desafios perigosos e o valor da privacidade</p>
+                    </div>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={dos} className="imgitem"></img>
+                        </div>
+
+                        <p>O comportamento digital dos pais influencia diretamente o dos filhos. Pratique o que ensina</p>
+                    </div>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={flt} className="imgitem"></img>
+                        </div>
+                        <p>Configure os dispositivos com filtros de conteúdo e acompanhe as atividades digitais das crianças</p>
+                    </div>
+                    <div className="itemM">
+                        <div className="eImg">
+                            <img src={safe} className="imgitem"></img>
+                        </div>
+                        <p>Crie um ambiente de confiança para que crianças e adolescentes se sintam seguros em relatar situações desconfortáveis que vivenciem online</p>
+                    </div>
                 </div>
             </div>
-            <h1 id="comoAfeta2">Para pais e responsáveis</h1>
-            <div className="englobMedidasG">
-            
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={talk} className="imgitem"></img>
-                    </div>
-                    <p>Converse com seus filhos sobre os conteúdos que acessam e ajude a estabelecer limites saudáveis para o uso de dispositivos</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={teach} className="imgitem"></img>
-                    </div>
-                    <p>Ensine a reconhecer golpes, perfis falsos, desafios perigosos e o valor da privacidade</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={dos} className="imgitem"></img>
-                    </div>
 
-                    <p>O comportamento digital dos pais influencia diretamente o dos filhos. Pratique o que ensina</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={flt} className="imgitem"></img>
-                    </div>
-                    <p>Configure os dispositivos com filtros de conteúdo e acompanhe as atividades digitais das crianças</p>
-                </div>
-                <div className="itemM">
-                    <div className="eImg">
-                        <img src={safe} className="imgitem"></img>
-                    </div>
-                    <p>Crie um ambiente de confiança para que crianças e adolescentes se sintam seguros em relatar situações desconfortáveis que vivenciem online</p>
-                </div>
-            </div>
-        <Footer></Footer>
+
+            <Footer></Footer>
         </>
     )
 }
