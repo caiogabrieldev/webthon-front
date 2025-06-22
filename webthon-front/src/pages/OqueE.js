@@ -3,8 +3,12 @@ import l1 from '../img/img-oquee.png'
 import l2Cri from '../img/img-criancaComendo.png'
 import l3Cri from '../img/criancaImgSla.webp'
 import Footer from "./Footer"
+import { useEffect } from "react"
 import finalImg from '../img/no-deve-fazer-celular-1920x1080 (2).png'
 function OQueE() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <div className="englobMask">

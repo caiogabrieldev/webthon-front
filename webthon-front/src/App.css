@@ -18,6 +18,32 @@
   transform: scale(1.1);
   cursor: pointer;
 }
+  
+.resPerg{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+}
+#Ph2{
+  margin-top: 20px;
+  font-size: 35px;
+  color: white;
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+#Ph3{
+  font-size: 20px;
+  color: white;
+ width: 90%;
+ height: 70%;
+text-align: center;
+}
 .englobFooter{
   width: 100vw;
   height: 40vh;
@@ -352,6 +378,29 @@ body{
   width: 50%;
   height: 40%;
   border-radius: 60%;
+}
+.pergunta{
+  color: rgb(82, 77, 77);
+}
+#Ph1{
+  font-size: 35px;
+  color: white;
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.englobPerguntas{
+  opacity: 0;
+  transform: translateY(-50px);
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  animation: textos 1s forwards;
+ 
 }
 .infoPerigo{
   width: 25%;

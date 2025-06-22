@@ -11,8 +11,11 @@ import ddos from '../img/ddos.png';
 import spy from '../img/spy.png';
 import redes from '../img/redes.png';
 import Footer from './Footer'
+import { useEffect } from 'react';
 function Perigos() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <div className="englobMask">

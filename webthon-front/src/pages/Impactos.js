@@ -11,8 +11,11 @@ import dos from '../img/do.png';
 import flt from '../img/flt.png';
 import safe from '../img/safe.png';
 import Footer from "./Footer";
+import { useEffect } from "react";
 function Impactos() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <div className="englobMask">
