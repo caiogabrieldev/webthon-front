@@ -3,13 +3,19 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Footer from "./Footer"
 import SendIcon from '@mui/icons-material/Send'
+import Fade from '@mui/material/Fade';
+
+import Alert from "@mui/material/Alert"
+import Slide from "@mui/material/Slide"
 import axios from 'axios'
 import { useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
 function Feedback() {
-    const resref=useRef(null)
+    const resref = useRef(null)
+    const [carregando,setCarregando] = useState(false)
     const [desativar, setDesativar] = useState(false)
+    const [desativarA, setDesativarA] = useState(false)
     const pRes = document.getElementById('Ph3')
     const [p1, setP1] = useState('')
     const [p2, setP2] = useState('')
@@ -19,16 +25,18 @@ function Feedback() {
     const [p6, setP6] = useState('')
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-      function irParaARes(){
+    }, []);
+    function irParaARes() {
         resref.current.scrollIntoView({ behavior: 'smooth' });
-      }
+    }
     async function handleEnviarPergunta() {
         if (p1 === '' || p2 === '' || p3 === '' || p4 === '' || p5 === '' || p6 === '') {
-            alert('Preencha todas as perguntas!')
+            setDesativarA(true)
+            setTimeout(() => { setDesativarA(false) }, 3000)
             return
         }
-        irParaARes()
+        setCarregando(true)
+        
         const resParaFeeedback = {
             'Como você administra o tempo que passa em frente às telas todos os dias?': p1,
             'Que tipo de conteúdo digital você consome com mais frequência e por quê?': p2,
@@ -44,7 +52,7 @@ function Feedback() {
             pRes.style.opacity = '0'
             pRes.style.transform = 'translateX(-40px)'
             pRes.style.animation = 'textos 1s forwards'
-
+            irParaARes()
             setDesativar(true)
         } catch (error) {
             console.log(error)
@@ -56,6 +64,30 @@ function Feedback() {
                 <Menu></Menu>
             </div>
             <div className="englobPerguntas">
+
+                <Slide direction="up" in={desativarA} mountOnEnter unmountOnExit>
+                    <Alert severity="error"
+                        sx={{
+                            position: 'fixed',
+                            top: '88%',
+                            left: '5%',
+                            transform: 'translateX(-50%)',
+                            width: '20%',
+                            zIndex: 1000,
+                            backgroundColor: '#37383a',
+                            fontFamily: 'Arial, sans-serif',
+                            color: 'red',
+                            fontSize: '1.2rem',
+                            textAlign: 'center',
+                            padding: '10px',
+                            transition: 'all 0.3s ease-in-out',
+                        }
+                        }
+                    >Preencha todos os campos</Alert>
+                </Slide>
+
+
+
                 <h1 id="Ph1">Responda ao questionário e receba um feedback do nosso assistente virtual</h1>
                 <TextField
                     disabled={desativar}
@@ -286,10 +318,14 @@ function Feedback() {
                         },
                     }}
                 />
+                <Button
 
-                <Button onClick={handleEnviarPergunta} variant="contained"
+                    size="small"
+                    onClick={handleEnviarPergunta}
                     endIcon={<SendIcon />}
-                    disabled={desativar}
+                    loading={carregando}
+                    loadingPosition="end"
+                    variant="contained"
                     sx={{
 
                         backgroundColor: 'rgb(29, 26, 26)',
@@ -307,6 +343,7 @@ function Feedback() {
                 >
                     Enviar
                 </Button>
+
 
             </div>
             <div className="resPerg" ref={resref}>

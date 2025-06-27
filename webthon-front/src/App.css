@@ -250,7 +250,9 @@ body{
   border-radius: 10px;
   box-shadow: 0 0 18px rgb(22, 22, 22);
   animation: img 1s forwards;
+  background-color: #37383a;
 }
+
 .englobPs{
   width: 40%;
   color: white;
