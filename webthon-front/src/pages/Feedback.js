@@ -54,6 +54,7 @@ function Feedback() {
             pRes.style.animation = 'textos 1s forwards'
             irParaARes()
             setDesativar(true)
+            setCarregando(false)
         } catch (error) {
             console.log(error)
         }
@@ -324,6 +325,7 @@ function Feedback() {
                     onClick={handleEnviarPergunta}
                     endIcon={<SendIcon />}
                     loading={carregando}
+                    disabled={desativar}
                     loadingPosition="end"
                     variant="contained"
                     sx={{

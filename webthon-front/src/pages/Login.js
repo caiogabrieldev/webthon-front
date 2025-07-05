@@ -13,11 +13,13 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Alert from '@mui/material/Alert';
+import Slide from '@mui/material/Slide';
 function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-
+    const [desativarA, setDesativarA] = useState(false)
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -25,6 +27,12 @@ function Login() {
     const handleMouseUpPassword = (event) => event.preventDefault();
 
     async function handleLogin(){
+        if(!email || !senha){
+            setDesativarA(true)
+            setTimeout(() => { setDesativarA(false) }, 3000)
+         
+            return;
+        }
         const user={
             email: email,
             senha: senha
@@ -44,6 +52,26 @@ function Login() {
 
     return (
         <div className="englobAllLogin">
+            <Slide direction="up" in={desativarA} mountOnEnter unmountOnExit>
+                    <Alert severity="error"
+                        sx={{
+                            position: 'fixed',
+                            top: '88%',
+                            left: '5%',
+                            transform: 'translateX(-50%)',
+                            width: '20%',
+                            zIndex: 1000,
+                            backgroundColor: '#37383a',
+                            fontFamily: 'Arial, sans-serif',
+                            color: 'red',
+                            fontSize: '1.2rem',
+                            textAlign: 'center',
+                            padding: '10px',
+                            transition: 'all 0.3s ease-in-out',
+                        }
+                        }
+                    >Preencha todos os campos</Alert>
+                </Slide>
             <div className="englobLogin">
                 <div className="login">
                     <h1 id='loginH1'>Login</h1>

@@ -12,13 +12,14 @@ import Send from '@mui/icons-material/Send';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
-
+import Alert from '@mui/material/Alert';
+import Slide from '@mui/material/Slide';
 function Cadastro() {
     const navigate=useNavigate()
     const [nome,setNome] = useState('');
     const [email,setEmail] = useState('');
     const [senha,setSenha] = useState('');
-
+    const [desativarA, setDesativarA] = useState(false)
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -26,7 +27,11 @@ function Cadastro() {
     const handleMouseUpPassword = (event) => event.preventDefault();
 
     async function handleCadastro() {
-        console.log('oi');
+        if(!nome || !email || !senha) {
+            setDesativarA(true)
+            setTimeout(() => { setDesativarA(false) }, 3000)
+            return;
+        }
         const user={
             nome: nome,
             email: email,
@@ -48,6 +53,26 @@ function Cadastro() {
     return (
         <>
             <div className="englobAllCadastro">
+            <Slide direction="up" in={desativarA} mountOnEnter unmountOnExit>
+                    <Alert severity="error"
+                        sx={{
+                            position: 'fixed',
+                            top: '88%',
+                            left: '5%',
+                            transform: 'translateX(-50%)',
+                            width: '20%',
+                            zIndex: 1000,
+                            backgroundColor: '#37383a',
+                            fontFamily: 'Arial, sans-serif',
+                            color: 'red',
+                            fontSize: '1.2rem',
+                            textAlign: 'center',
+                            padding: '10px',
+                            transition: 'all 0.3s ease-in-out',
+                        }
+                        }
+                    >Preencha todos os campos</Alert>
+                </Slide>
                 <div className="englobCadastro">
                     <div className="cadastro">
                         <h1 id='loginH1'>Cadastro</h1>
