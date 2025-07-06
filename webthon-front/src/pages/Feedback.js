@@ -268,7 +268,6 @@ function Feedback() {
                         '& .MuiFilledInput-input': {
                             color: 'white',
                             fontSize: 16,
-
                         },
                         '& .MuiInputLabel-root': {
                             color: 'gray',
@@ -329,7 +328,6 @@ function Feedback() {
                     loadingPosition="end"
                     variant="contained"
                     sx={{
-
                         backgroundColor: 'rgb(29, 26, 26)',
                         color: 'white',
                         width: '20vw',
