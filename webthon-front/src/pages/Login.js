@@ -20,6 +20,7 @@ function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [desativarA, setDesativarA] = useState(false)
+    const [desativarA2, setDesativarA2] = useState(false)
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -46,6 +47,9 @@ function Login() {
                 navigate('/')
             }
         } catch (error) {
+            setDesativarA2(true)
+            setTimeout(() => { setDesativarA2(false) }, 3000)
+          
             console.log('Erro ao fazer login', error);
         }
     }
@@ -71,6 +75,26 @@ function Login() {
                         }
                         }
                     >Preencha todos os campos</Alert>
+                </Slide>
+                <Slide direction="up" in={desativarA2} mountOnEnter unmountOnExit>
+                    <Alert severity="error"
+                        sx={{
+                            position: 'fixed',
+                            top: '88%',
+                            left: '5%',
+                            transform: 'translateX(-50%)',
+                            width: '20%',
+                            zIndex: 1000,
+                            backgroundColor: '#37383a',
+                            fontFamily: 'Arial, sans-serif',
+                            color: 'red',
+                            fontSize: '1.2rem',
+                            textAlign: 'center',
+                            padding: '10px',
+                            transition: 'all 0.3s ease-in-out',
+                        }
+                        }
+                    >Usuário não encontrado</Alert>
                 </Slide>
             <div className="englobLogin">
                 <div className="login">
